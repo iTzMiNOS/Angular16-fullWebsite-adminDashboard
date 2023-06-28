@@ -1,0 +1,12 @@
+.td-10{
+  min-width: 5px;
+  max-width: 10px;
+}
+.td-100{
+  min-width: 50px;
+  max-width: 250px;
+}
+.tdm-100{
+  min-width: 10px;
+  max-width: 100px;
+}
