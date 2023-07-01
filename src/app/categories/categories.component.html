@@ -4,7 +4,7 @@
       <h3 class="text-center text-theme-primary ">{{formStatus}} Categories</h3>
       <p class="text-center mb-5">You can {{formStatus}} new categories from here ..!</p>
       <form class="form-inline text-center" #categoryform = 'ngForm' (ngSubmit)="onClick(categoryform)">
-        <div class="form-group col-md-10">
+        <div class="form-group col-md-8">
           <input
           type="text"
           class="form-control shadow-effect"
@@ -16,8 +16,9 @@
           [ngClass]="{'is-invalid':newCategory.touched && newCategory.invalid}">
           <div class="alert alert-danger" *ngIf="newCategory.touched && newCategory.invalid"> Category Field is Required.. !</div>
         </div>
-        <div class="col-md-2">
-          <button class="btn btn-block btn-theme btn-info mb-2" [disabled]="categoryform.invalid" >{{formStatus}} Category</button>
+        <div class="col-md-4">
+          <button class="btn btn-info bg-theme" [disabled]="categoryform.invalid" >{{formStatus}} Category</button>
+          <button class="btn btn-warning ml-2" routerLink="/">Back to dashboard</button>
         </div>
       </form>
     </div>

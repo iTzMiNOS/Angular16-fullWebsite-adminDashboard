@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow-effect bg-secondary-theme">
+        <div id="main">
+          <div class="fof">
+                <h1>Error 404 | Page Not Found!</h1>
+          </div>
+        </div>
+        <div class="card-body text-center">
+          <div *ngIf = "isLogged$ | async; else loggedOut">
+            <button class="btn btn-info bg-theme text-theme-secondary" [routerLink]="'/'">Go Back</button>
+          </div>
+          <ng-template #loggedOut>
+            <button class="btn btn-info bg-theme text-theme-secondary" [routerLink]="'/login'">Go Back</button>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

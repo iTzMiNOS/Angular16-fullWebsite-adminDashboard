@@ -5,13 +5,16 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AllPostsComponent } from './post/all-posts/all-posts.component';
 import { NewPostComponent } from './post/new-post/new-post.component';
 import { LoginComponent } from './auth/login/login.component';
+import { authGuard } from './services/auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  {path: '',component:DashboardComponent},
+  {path: '',component:DashboardComponent,canActivate: [authGuard]},
   {path: 'login',component:LoginComponent},
-  {path: 'categories',component:CategoriesComponent},
-  {path: 'posts',component:AllPostsComponent},
-  {path: 'posts/new',component:NewPostComponent}
+  {path: 'categories',component:CategoriesComponent,canActivate: [authGuard]},
+  {path: 'posts',component:AllPostsComponent,canActivate: [authGuard]},
+  {path: 'posts/new',component:NewPostComponent,canActivate: [authGuard]},
+  { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];
 
 @NgModule({
