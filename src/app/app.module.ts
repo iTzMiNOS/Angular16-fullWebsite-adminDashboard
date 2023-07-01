@@ -5,6 +5,7 @@ import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environment.development';import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -17,6 +18,7 @@ import { NewPostComponent } from './post/new-post/new-post.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DashboardComponent,
     CategoriesComponent,
     AllPostsComponent,
-    NewPostComponent
+    NewPostComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularEditorModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
