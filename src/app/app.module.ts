@@ -6,7 +6,8 @@ import { AngularFireStorageModule} from '@angular/fire/compat/storage'
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from '../environments/environment.development';import { AppRoutingModule } from './app-routing.module';
+import { environment } from '../environments/environment.development';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
@@ -20,6 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CommentsComponent } from './comments/comments.component';
+import { SubscribersComponent } from './subscribers/subscribers.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AllPostsComponent,
     NewPostComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CommentsComponent,
+    SubscribersComponent
   ],
   imports: [
     BrowserModule,
